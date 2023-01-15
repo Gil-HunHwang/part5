@@ -1,0 +1,261 @@
+/* ---------------------------------------------- */
+/* 헤더                                            */
+/* ---------------------------------------------- */
+.header {
+  width: 1920px;
+  height: 117px;
+}
+
+.header__inner {
+  width: 1020px;
+  height: 116px;
+  margin: 0 auto;
+}
+
+.header__inner .button--category{
+  width: 110px;
+  height: 116px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-blue-600);
+  color: var(--color-white);
+  border: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 400px;
+}
+
+.button--category .catergory-icon {
+  margin-bottom: 12px;
+}
+
+.header__inner .button--category:focus { 
+  outline: none;
+  border-radius: 10%;
+}
+
+/* ---------------------------------------------- */
+/* 내비게이션                                        */
+/* ---------------------------------------------- */
+.navigation {
+  width: 1920px;
+}
+
+.navigation__inner {
+  width: 1020px;
+  height: 520px;
+  margin: 0 auto;
+  font-size: 12px;
+}
+
+.is--active:nth-child(2) .navigation__list{
+  display: block;
+}
+
+.navigation h2 {
+  display: inline-block;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0,0,0,0);
+}
+
+.navigation__inner .navigation__list{
+  width: 540px;
+  height: 500px;
+  position: relative;
+  box-shadow: 0px 4px 4px 2px var(--color-gray-300);
+}
+
+.navigation__list .Depth1 {
+  position: absolute;
+  width: 180px;
+  padding: 10px 5px;
+}
+
+.Depth1 > *{
+  position: absolute;
+  width: 170px;
+  height: 30px;
+  padding: 10px 5px;
+}
+
+.Depth1 .is--active:nth-child(1){
+  color: var(--color-blue-600);
+}
+
+.Depth2 {
+  color: black;
+}
+
+.Depth3 {
+  color: black;
+}
+
+.is--active:nth-child(2):hover a{
+  color: var(--color-blue-600);
+}
+
+.navigation__list .Depth2 {
+  position: absolute;
+  width: 180px;
+  height: auto;
+  left: 180px;
+  padding: 10px 5px;
+}
+
+.Depth2 > * {
+  width: 170px;
+  height: 30px;
+  text-align: left;
+}
+
+.navigation__list .Depth3 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 180px;
+  height: auto;
+  left: 180px;
+  top: 0;
+  padding: 10px 5px;
+}
+
+.navigation__list .Depth3 > * {
+  width: 170px;
+  height: 30px;
+}
+
+/* ---------------------------------------------- */
+/* 메인 콘텐츠                                       */
+/* ---------------------------------------------- */
+/* 메인 콘텐츠 영역의 최소 높이 설정 */
+/* .main{
+  min-height: 52rem;
+} */
+
+
+/* ---------------------------------------------- */
+/* 푸터                                            */
+/* ---------------------------------------------- */
+
+.footer {
+  width: 1920px;
+  height: 349px;
+  border: 1px solid red;
+}
+
+.footer .footer-layout1 {
+  width: 1920px;
+  height: 40px;
+  background-color: var(--color-gray-200);
+}
+
+.footer-layout1 .footer-top-tilte {
+  display: flex;
+  width: 1006px;
+  height: 35px;
+  margin: 0 auto;
+  font-size: 12px;
+  align-items: center;
+  color: var(--color-gray-800);
+}
+
+.footer-top-tilte > *:not(.divider){
+  width: auto;
+  padding: 0px 14px;
+}
+
+.divider{
+  height: 12px;
+  border-left : 1px solid var(--color-gray-800);
+  text-indent: -9999px;
+}
+
+.footer-layout2 {
+  width: 1920px;
+  height: 207px;
+}
+
+.footer-layout2-container {
+  display: flex;
+  width: 1200px;
+  height: 143px;
+  margin: 32px auto;
+}
+
+.footer-layout2-container .footer-Logo {
+  width: 176px;
+  height: 40px;
+  background-image: url(/assets/logo/logo-mono.svg);
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  margin-right: 63px;
+}
+
+.address p{
+  margin-bottom: 12px;
+  margin-right: 62px;
+}
+
+.footer-layout2-container .call-center {
+  display: flex;
+  flex-direction: column;
+  margin-right: 62px;
+}
+
+.call-center > *:not(.number) {
+  margin-bottom: 8px;
+}
+
+.call-center .number {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.safe-service {
+  width: 282px;
+  height: 84px;
+}
+
+.safe-service p{
+  margin-top: 8px;
+}
+
+.footer-layout3 {
+  width: 1920px;
+  height: 102px;
+  background-color: var(--color-gray-900);
+  padding: 16px 0px;
+}
+
+.footer-layout3-container {
+  display: flex;
+  width: 1020px;
+  height: 70px;
+  color: var(--color-gray-200);
+  margin: 0px auto;
+}
+
+.footer-layout3-container p {
+  font-size: 12px;
+}
+
+.img-container {
+  display: flex;
+  width: 122px;
+  height: 34px;
+  margin-left: auto;
+  margin-top: auto;
+  justify-content: space-between;
+}
+
+.Gradinet {
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(174.12deg, #285AEB 5.61%, #BC1888 22.32%, #CC2366 36.16%, #DC2743 51.91%, #E6683C 73.38%, #F09433 91.99%);
+  border-radius: 50%; 
+}
+
+
