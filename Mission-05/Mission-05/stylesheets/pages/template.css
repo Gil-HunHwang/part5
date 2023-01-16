@@ -49,10 +49,6 @@
   font-size: 12px;
 }
 
-.is--active:nth-child(2) .navigation__list{
-  display: block;
-}
-
 .navigation h2 {
   display: inline-block;
   position: absolute;
@@ -62,10 +58,19 @@
 }
 
 .navigation__inner .navigation__list{
+  display: none;
   width: 540px;
   height: 500px;
   position: relative;
   box-shadow: 0px 4px 4px 2px var(--color-gray-300);
+}
+
+.is--active:nth-child(2) .navigation__list{
+  display: block;
+}
+
+.is--active:nth-child(2) .navigation__list:hover .Depth1>a{
+  color: blue;
 }
 
 .navigation__list .Depth1 {
@@ -74,34 +79,24 @@
   padding: 10px 5px;
 }
 
+.Depth1 i {
+  display: block;
+}
+
 .Depth1 > *{
-  position: absolute;
   width: 170px;
   height: 30px;
   padding: 10px 5px;
 }
 
-.Depth1 .is--active:nth-child(1){
-  color: var(--color-blue-600);
-}
-
 .Depth2 {
-  color: black;
-}
-
-.Depth3 {
-  color: black;
-}
-
-.is--active:nth-child(2):hover a{
-  color: var(--color-blue-600);
-}
-
-.navigation__list .Depth2 {
+  display: none;
   position: absolute;
+  color: black;
   width: 180px;
   height: auto;
   left: 180px;
+  top: -24px;
   padding: 10px 5px;
 }
 
@@ -111,14 +106,24 @@
   text-align: left;
 }
 
-.navigation__list .Depth3 {
-  display: flex;
+.is--active ~ .Depth2 {
+  display: block;
+}
+
+.is--active ~ .Depth2:hover a{
+  color: red;
+}
+
+
+.Depth3 {
+  display: none;
+  color: black;
   flex-direction: column;
   position: absolute;
   width: 180px;
   height: auto;
   left: 180px;
-  top: 0;
+  top: 30px;
   padding: 10px 5px;
 }
 
@@ -127,13 +132,21 @@
   height: 30px;
 }
 
+.is--active ~ .Depth2:hover .Depth3{
+  display: block;
+}
+
+.Depth3:hover {
+  color: green;
+}
+
 /* ---------------------------------------------- */
 /* 메인 콘텐츠                                       */
 /* ---------------------------------------------- */
 /* 메인 콘텐츠 영역의 최소 높이 설정 */
-/* .main{
+.main{
   min-height: 52rem;
-} */
+}
 
 
 /* ---------------------------------------------- */
