@@ -43,10 +43,11 @@
 }
 
 .navigation__inner {
+  position: absolute;
   width: 1020px;
   height: 520px;
-  margin: 0 auto;
   font-size: 12px;
+  left: 450px;
 }
 
 .navigation h2 {
@@ -69,11 +70,6 @@
   display: block;
 }
 
-/* .is--active:nth-child(2) .navigation__list:hover .Depth1>a{
-  color: blue;
-  font-weight: 700;
-} */
-
 .navigation__list .Depth1 {
   position: absolute;
   width: 180px;
@@ -90,19 +86,21 @@
   padding: 10px 5px;
 }
 
-.Depth1:hover > a > .icon-baby{
-  color: var(--color-blue-600);
-  font-weight: 700;
+.Depth1::before {
+  content: '';
+  position: absolute;
+  height: 500px;
+  border: 1px solid var(--color-gray-300);
+  right: 10px;  
+  bottom: 0px;
 }
 
-.Depth1:hover .arrow{
-  display: inline-block;
-  width: 9px;
-  height: 6px;
-   border-left: 7px solid var(--color-blue-600);
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-  margin-left: 24px;
+.Depth1:hover .icon-clothes{
+  color: var(--color-blue-600);
+  font-weight: 700;
+  background-image: url(/assets/icon/more-right-active.svg);
+  background-repeat: no-repeat;
+  background-position: 120px;
 }
 
 .Depth2 {
@@ -122,13 +120,25 @@
   text-align: left;
 }
 
+.Depth2::before {
+  content: '';
+  position: absolute;
+  height: 500px;
+  border: 1px solid var(--color-gray-300);
+  right: 10px;  
+  top: 23px;
+}
+
 .is--active ~ .Depth2 {
   display: block;
 }
 
-.is--active ~ .Depth2:hover > a{
-  color: blue;
+.is--active ~ .Depth2:hover > .Depth2__a{
+  color: var(--color-blue-600);
   font-weight: 700;
+  background-image: url(/assets/icon/more-right-active.svg);
+  background-repeat: no-repeat;
+  background-position: 120px 13%;
 }
 
 .Depth3 {
@@ -153,8 +163,8 @@
 }
 
 .Depth3>a:hover {
-  color: blue;
-  
+  color: var(--color-blue-600);
+  font-weight: 700;
 }
 
 /* ---------------------------------------------- */
@@ -173,7 +183,6 @@
 .footer {
   width: 1920px;
   height: 349px;
-  border: 1px solid red;
 }
 
 .footer .footer-layout1 {
@@ -287,5 +296,3 @@
   background: linear-gradient(174.12deg, #285AEB 5.61%, #BC1888 22.32%, #CC2366 36.16%, #DC2743 51.91%, #E6683C 73.38%, #F09433 91.99%);
   border-radius: 50%; 
 }
-
-
